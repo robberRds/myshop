@@ -170,89 +170,57 @@
                     <div class="mobile-menu">
                         <nav id="mobile-menu-active">
                             <ul class="menu-overflow">
-                                <li><a href="#">HOME</a>
-                                    <ul>
-                                        <li><a href="{{route('food-shop/index')}}">home version 1</a></li>
-                                        <li><a href="{{route('food-shop/index-2')}}">home version 2</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="#">HOME</a></li>
                                 <li><a href="#">pages</a>
                                     <ul>
                                         <li>
-                                            <a href="{{route('food-shop/about')}}">about us</a>
+                                            <a href="#">about us</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/shop-page')}}">shop page</a>
+                                            <a href="#">shop page</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/shop-list')}}">shop list</a>
+                                            <a href="#">shop list</a>
                                         </li>
                                         <li>
                                             <a href="#">product details</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/cart')}}">cart page</a>
+                                            <a href="#">cart page</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/checkout')}}">checkout</a>
+                                            <a href="#">checkout</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/wishlist')}}">wishlist</a>
+                                            <a href="#">wishlist</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/contact')}}">contact us</a>
+                                            <a href="#">contact us</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/my-account')}}">my account</a>
+                                            <a href="#">my account</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/login-register')}}">login / register</a>
+                                            <a href="#">login / register</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Food</a>
                                     <ul>
-                                        <li><a href="#">Dogs Food</a>
-                                            <ul>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Grapes and Raisins</a></li>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Carrots</a></li>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Peanut Butter</a></li>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Salmon fishs</a></li>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Eggs</a></li>
-                                            </ul>
+                                        <li>
+                                            <a href="#">Перша страва</a>
                                         </li>
-                                        <li><a href="#">Cats Food</a>
-                                            <ul>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Meat</a></li>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Fish</a></li>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Eggs</a></li>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Veggies</a></li>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Cheese</a></li>
-                                            </ul>
+                                        <li>
+                                            <a href="#">Друга страва</a>
                                         </li>
-                                        <li><a href="#">Fishs Food</a>
-                                            <ul>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Rice</a></li>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Veggies</a></li>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Cheese</a></li>
-                                                <li><a href="{{route('food-shop/shop-page')}}">wheat bran</a></li>
-                                                <li><a href="{{route('food-shop/shop-page')}}">Cultivation</a></li>
-                                            </ul>
+                                        <li>
+                                            <a href="#">Напої</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Десерти</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#">blog</a>
-                                    <ul>
-                                        <li>
-                                            <a href="{{route('food-shop/blog')}}">blog page</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('food-shop/blog-leftsidebar')}}">blog left sidebar</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('food-shop/blog-details')}}">blog details</a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li><a href="{{route('food-shop/contact')}}"> Contact us </a></li>
                             </ul>

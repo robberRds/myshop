@@ -73,22 +73,4 @@ Route::get('food-shop/login-register', function () {
 
 
 
-Route::get('food-shop/my-account', function () {
-    return view('food-shop/my-account');
-})->name('food-shop/my-account');
 
-Route::get('food-shop/blog', function () {
-    return view('food-shop/blog');
-})->name('food-shop/blog');
-
-Route::get('food-shop/blog-details', function () {
-    return view('food-shop/blog-details');
-})->name('food-shop/blog-details');
-
-Route::get('food-shop/blog-leftsidebar', function () {
-    return view('food-shop/blog-leftsidebar');
-})->name('food-shop/blog-leftsidebar');
-
-Route::get('food-shop/index-2', function () {
-    return view('food-shop/index-2');
-})->name('food-shop/index-2');
