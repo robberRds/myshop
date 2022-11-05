@@ -16,14 +16,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });*/
-Route::get('/', function () {
-    return view('food-shop/index');
-});
+Route::get('/', [\App\Http\Controllers\ProductController::class, 'shopIndex'])
+    ->name('food-shop/index');
+
 Route::get('food-shop/shop-page', [\App\Http\Controllers\ProductController::class, 'shopList'])
     ->name('food-shop/shop-page');
 
 Route::get('food-shop/index', [\App\Http\Controllers\ProductController::class, 'shopIndex'])
     ->name('food-shop/index');
+
+Route::get('food-shop/product-details', [\App\Http\Controllers\ProductController::class, 'productDetails'])
+    ->name('food-shop/product-details');
+
+/*Route::get('food-shop/product-details', function () {
+    return view('food-shop/product-details');
+})->name('food-shop/product-details');*/
 
 Route::get('food-shop/index-2', function () {
     return view('food-shop/index-2');
@@ -37,9 +44,6 @@ Route::get('food-shop/shop-list', function () {
     return view('food-shop/shop-list');
 })->name('food-shop/shop-list');
 
-Route::get('food-shop/product-details', function () {
-    return view('food-shop/product-details');
-})->name('food-shop/product-details');
 
 Route::get('food-shop/cart', function () {
     return view('food-shop/cart');
@@ -81,7 +85,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
