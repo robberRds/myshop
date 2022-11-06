@@ -35,6 +35,9 @@ Route::get('food-shop/contact', function () {
 Route::get('food-shop/about', [\App\Http\Controllers\FoodController::class, 'about'])
     ->name('food-shop/about');
 
+Route::get('food-shop/add-cart', [\App\Http\Controllers\ProductController::class, 'addCart'])
+    ->name('food-shop/add-cart');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
