@@ -109,17 +109,37 @@ class ProductController extends Controller
     public function checkout()
     {
         $user = Auth::user();
-
         $sessionId = Session::getId();
         \Cart::session($sessionId);
         $cart = \Cart::getContent();
         $sum = \Cart::getTotal('price');
 
+        $messageSuccessOrder = \session('successOrder');
+
+        $orders = Order::query()->where(['user_id'=>$user->getAuthIdentifier()])
+            ->orderBy('id','desc')->get();
+
+        $orders->transform(function ($order){
+            $order->cart_data = unserialize($order->cart_data);
+
+            return $order;
+        });
+
+        if(!empty($messageSuccessOrder)){
+            return view('food-shop/checkout', [
+                'cart' => $cart,
+                'sum' => $sum,
+                'user' => $user,
+                'orders' => $orders,
+            ])->with('messageSuccessOrder', $messageSuccessOrder);
+        }
+
         return view('food-shop/checkout', [
             'cart' => $cart,
             'sum' => $sum,
             'user' => $user,
-        ]);
+            'orders' => $orders,
+        ])->with('messageSuccessOrder', $messageSuccessOrder);
     }
 
     public function profile()
@@ -150,7 +170,15 @@ class ProductController extends Controller
         $order->phone = $request->phone;
         $order->address = $request->address . ' ' . $request->sity . ' ' . $request->post;
 
-        $order->save();
+        if($order->save()){
+            \Cart::clear();
+
+            Session::flash('successOrder', 'Order created successfully');
+            return back();
+        }
+
+        Session::flash('errorOrder', 'Something went wrong');
+
 
         return back();
     }
