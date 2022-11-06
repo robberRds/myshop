@@ -63,17 +63,5 @@ Route::group(['prefix' => 'admin'], function () {
     return view('food-shop/product-details');
 })->name('food-shop/product-details');*/
 
-Route::get('food-shop/shop-list', function () {
-    return view('food-shop/shop-list');
-})->name('food-shop/shop-list');
-
-Route::get('food-shop/cart', function () {
-    return view('food-shop/cart');
-})->name('food-shop/cart');
-
-Route::get('food-shop/wishlist', function () {
-    return view('food-shop/wishlist');
-})->name('food-shop/wishlist');
-
 
 
