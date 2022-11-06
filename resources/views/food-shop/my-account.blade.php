@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Marten - Pet Food eCommerce Bootstrap4 Template</title>
+        <title>Profile</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
@@ -79,6 +79,14 @@
                                                     <div class="billing-back">
                                                         <a href="#"><i class="ti-arrow-up"></i> back</a>
                                                     </div>
+                                                    <form method="POST" action="{{ route('logout') }}">
+                                                        <div class="billing-btn">
+                                                            @csrf
+                                                            <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
+                                                                {{ __('Log Out') }}
+                                                            </button>
+                                                        </div>
+                                                    </form>
                                                     <div class="billing-btn">
                                                         <button type="submit">Continue</button>
                                                     </div>

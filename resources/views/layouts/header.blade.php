@@ -118,7 +118,7 @@
                             </div>
                         </div>
                         <div class="header-login same-style">
-                            <a href="{{route('food-shop/login-register')}}"><i class="icon-user icons"></i></a>
+                            <a href="{{route('food-shop/my-account')}}"><i class="icon-user icons"></i></a>
                         </div>
                         <div class="header-cart same-style">
                             <button class="icon-cart">

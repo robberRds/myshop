@@ -13,8 +13,15 @@ class ProductController extends Controller
         $products = Product::all();
         //$products = Product::query()->limit(3)->offset(1)->get();
 
+        $sessionId = Session::getId();
+        \Cart::session($sessionId);
+        $cart = \Cart::getContent();
+        $sum = \Cart::getTotal('price');
+
         return view('food-shop/shop-page', [
             'products' => $products,
+            'cart' => $cart,
+            'sum' => $sum
         ]);
     }
     public function shopIndex()
@@ -39,8 +46,15 @@ class ProductController extends Controller
     {
         $product = Product::query()->where(['id'=>$request->id])->get();
 
+        $sessionId = Session::getId();
+        \Cart::session($sessionId);
+        $cart = \Cart::getContent();
+        $sum = \Cart::getTotal('price');
+
         return view('food-shop/product-details', [
-            'product'=>$product
+            'product'=>$product,
+            'cart' => $cart,
+            'sum' => $sum
         ]);
     }
 
@@ -63,5 +77,66 @@ class ProductController extends Controller
         $cart = \Cart::getContent();
 
         return redirect()->back();
+    }
+
+    public function contact()
+    {
+        $sessionId = Session::getId();
+        \Cart::session($sessionId);
+        $cart = \Cart::getContent();
+        $sum = \Cart::getTotal('price');
+
+        return view('food-shop/contact', [
+            'cart' => $cart,
+            'sum' => $sum
+        ]);
+    }
+
+    public function about()
+    {
+        $sessionId = Session::getId();
+        \Cart::session($sessionId);
+        $cart = \Cart::getContent();
+        $sum = \Cart::getTotal('price');
+        return view('food-shop/about-us', [
+            'cart' => $cart,
+            'sum' => $sum
+        ]);
+    }
+
+    public function checkout()
+    {
+        $sessionId = Session::getId();
+        \Cart::session($sessionId);
+        $cart = \Cart::getContent();
+        $sum = \Cart::getTotal('price');
+        return view('food-shop/checkout', [
+            'cart' => $cart,
+            'sum' => $sum
+        ]);
+    }
+
+    public function profile()
+    {
+        $sessionId = Session::getId();
+        \Cart::session($sessionId);
+        $cart = \Cart::getContent();
+        $sum = \Cart::getTotal('price');
+        return view('food-shop/my-account', [
+            'cart' => $cart,
+            'sum' => $sum
+        ]);
+    }
+
+    public function mycart()
+    {
+        $sessionId = Session::getId();
+        \Cart::session($sessionId);
+        $cart = \Cart::getContent();
+        $sum = \Cart::getTotal('price');
+        return view('food-shop/cart', [
+            'cart' => $cart,
+            'sum' => $sum
+        ]);
     }
 }

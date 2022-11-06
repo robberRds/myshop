@@ -28,15 +28,23 @@ Route::get('food-shop/index', [\App\Http\Controllers\ProductController::class, '
 Route::get('food-shop/product-details', [\App\Http\Controllers\ProductController::class, 'productDetails'])
     ->name('food-shop/product-details');
 
-Route::get('food-shop/contact', function () {
-    return view('food-shop/contact');
-})->name('food-shop/contact');
+Route::get('food-shop/contact', [\App\Http\Controllers\ProductController::class, 'contact'])
+    ->name('food-shop/contact');
 
-Route::get('food-shop/about', [\App\Http\Controllers\FoodController::class, 'about'])
+Route::get('food-shop/about', [\App\Http\Controllers\ProductController::class, 'about'])
     ->name('food-shop/about');
 
 Route::get('food-shop/add-cart', [\App\Http\Controllers\ProductController::class, 'addCart'])
     ->name('food-shop/add-cart');
+
+Route::get('food-shop/checkout', [\App\Http\Controllers\ProductController::class, 'checkout'])
+    ->name('food-shop/checkout')->middleware('auth');
+
+Route::get('food-shop/my-account', [\App\Http\Controllers\ProductController::class, 'profile'])
+    ->name('food-shop/my-account')->middleware('auth');
+
+Route::get('food-shop/cart', [\App\Http\Controllers\ProductController::class, 'mycart'])
+    ->name('food-shop/cart')->middleware('auth');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -60,15 +68,9 @@ Route::get('food-shop/cart', function () {
     return view('food-shop/cart');
 })->name('food-shop/cart');
 
-Route::get('food-shop/checkout', function () {
-    return view('food-shop/checkout');
-})->name('food-shop/checkout');
-
 Route::get('food-shop/wishlist', function () {
     return view('food-shop/wishlist');
 })->name('food-shop/wishlist');
 
-Route::get('food-shop/login-register', function () {
-    return view('food-shop/login-register');
-})->name('food-shop/login-register');
+
 
