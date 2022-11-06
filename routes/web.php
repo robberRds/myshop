@@ -43,6 +43,9 @@ Route::get('food-shop/checkout', [\App\Http\Controllers\ProductController::class
 Route::get('food-shop/my-account', [\App\Http\Controllers\ProductController::class, 'profile'])
     ->name('food-shop/my-account')->middleware('auth');
 
+Route::post('food-shop/make-order', [\App\Http\Controllers\ProductController::class, 'makeOrder'])
+    ->name('food-shop/make-order')->middleware('auth');
+
 Route::get('food-shop/cart', [\App\Http\Controllers\ProductController::class, 'mycart'])
     ->name('food-shop/cart')->middleware('auth');
 

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
@@ -106,13 +108,17 @@ class ProductController extends Controller
 
     public function checkout()
     {
+        $user = Auth::user();
+
         $sessionId = Session::getId();
         \Cart::session($sessionId);
         $cart = \Cart::getContent();
         $sum = \Cart::getTotal('price');
+
         return view('food-shop/checkout', [
             'cart' => $cart,
-            'sum' => $sum
+            'sum' => $sum,
+            'user' => $user,
         ]);
     }
 
@@ -126,6 +132,27 @@ class ProductController extends Controller
             'cart' => $cart,
             'sum' => $sum
         ]);
+    }
+
+    public function makeOrder(Request $request)
+    {
+        $user = Auth::user();
+
+        $sessionId = Session::getId();
+        \Cart::session($sessionId);
+        $cart = \Cart::getContent();
+        $sum = \Cart::getTotal('price');
+
+        $order = new Order();
+        $order->user_id = $user->id;
+        $order->cart_data = $order->setCartDataAttribute($cart);
+        $order->total_sum = $sum;
+        $order->phone = $request->phone;
+        $order->address = $request->address . ' ' . $request->sity . ' ' . $request->post;
+
+        $order->save();
+
+        return back();
     }
 
     public function mycart()
