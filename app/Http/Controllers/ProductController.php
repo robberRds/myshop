@@ -84,19 +84,6 @@ class ProductController extends Controller
         return redirect()->back();
     }
 
-    public function contact()
-    {
-        $sessionId = Session::getId();
-        \Cart::session($sessionId);
-        $cart = \Cart::getContent();
-        $sum = \Cart::getTotal('price');
-
-        return view('food-shop/contact', [
-            'cart' => $cart,
-            'sum' => $sum
-        ]);
-    }
-
     public function about()
     {
         $sessionId = Session::getId();
@@ -147,13 +134,16 @@ class ProductController extends Controller
 
     public function profile()
     {
+        $user = Auth::user();
+
         $sessionId = Session::getId();
         \Cart::session($sessionId);
         $cart = \Cart::getContent();
         $sum = \Cart::getTotal('price');
         return view('food-shop/my-account', [
             'cart' => $cart,
-            'sum' => $sum
+            'sum' => $sum,
+            'user' => $user,
         ]);
     }
 
@@ -194,5 +184,17 @@ class ProductController extends Controller
 
 
         return back();
+    }
+    public function contact()
+    {
+        $sessionId = Session::getId();
+        \Cart::session($sessionId);
+        $cart = \Cart::getContent();
+        $sum = \Cart::getTotal('price');
+
+        return view('food-shop/contact', [
+            'cart' => $cart,
+            'sum' => $sum
+        ]);
     }
 }

@@ -12,7 +12,7 @@
     </head>
     <body>
     @include('layouts.header')
-        <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/banner/banner-2.jpg);">
+        <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/myimg/board.png);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
                     <h2>Contact Us</h2>
@@ -34,7 +34,7 @@
                             <div class="contact-info-content">
                                 <h4>Our Location</h4>
                                 <p>012 345 678 / 123 456 789</p>
-                                <p><a href="#">info@example.com</a></p>
+                                <p><a href="#">ihorbalitsky@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -45,8 +45,8 @@
                             </div>
                             <div class="contact-info-content">
                                 <h4>Contact us Anytime</h4>
-                                <p>Mobile: 012 345 678</p>
-                                <p>Fax: 123 456 789</p>
+                                <p>Mobile: +38 098 133 3579</p>
+                                <p>Fax: 098 133 3579</p>
                             </div>
                         </div>
                     </div>
@@ -57,43 +57,8 @@
                             </div>
                             <div class="contact-info-content">
                                 <h4>Write Some Words</h4>
-                                <p><a href="#">Support24/7@example.com </a></p>
-                                <p><a href="#">info@example.com</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="contact-message-wrapper">
-                            <h4 class="contact-title">GET IN TOUCH</h4>
-                            <div class="contact-message">
-                                <form id="contact-form" action="../../../public/mail.php" method="post">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="contact-form-style mb-20">
-                                                <input name="name" placeholder="Full Name" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="contact-form-style mb-20">
-                                                <input name="email" placeholder="Email Address" type="email">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="contact-form-style mb-20">
-                                                <input name="subject" placeholder="Subject" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="contact-form-style">
-                                                <textarea name="message" placeholder="Message"></textarea>
-                                                <button class="submit btn-style" type="submit">SEND MESSAGE</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <p class="form-messege"></p>
+                                <p><a href="#">ihor.bali@mail.ru </a></p>
+                                <p><a href="#">ihorbalitsky@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -103,96 +68,7 @@
                 </div>
             </div>
         </div>
-		<footer class="footer-area">
-            <div class="footer-top pt-80 pb-50 gray-bg-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                            <div class="footer-widget mb-30">
-                                <div class="footer-info-wrapper">
-                                    <div class="footer-logo">
-                                        <a href="#">
-                                            <img src="../../../public/img/logo/logo-2.png" alt="">
-                                        </a>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, co adipisi elit, sed eiusmod tempor incididunt ut labore et dolore</p>
-                                    <div class="social-icon">
-                                        <ul>
-                                            <li><a href="#"><i class="icon-social-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-social-instagram"></i></a></li>
-                                            <li><a href="#"><i class="icon-social-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="icon-social-skype"></i></a></li>
-                                            <li><a href="#"><i class="icon-social-dribbble"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                            <div class="footer-widget mb-30 pl-50">
-                                <h4 class="footer-title">USEFUL LINKS</h4>
-                                <div class="footer-content">
-                                    <ul>
-                                        <li><a href="#">Help & Contact Us</a></li>
-                                        <li><a href="#">Returns & Refunds</a></li>
-                                        <li><a href="#">Online Stores</a></li>
-                                        <li><a href="#">Terms & Conditions</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-2 col-md-6 col-sm-6">
-                            <div class="footer-widget mb-30 pl-70">
-                                <h4 class="footer-title">HELP</h4>
-                                <div class="footer-content">
-                                    <ul>
-                                        <li><a href="#">Faq's </a></li>
-                                        <li><a href="#">Pricing Plans</a></li>
-                                        <li><a href="#">Order Traking</a></li>
-                                        <li><a href="#">Returns </a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                            <div class="footer-widget">
-                                <div class="newsletter-wrapper">
-                                    <p>Subscribe to our newsletter and get 10% off your first purchase..</p>
-                                    <div class="newsletter-style">
-                                        <div id="mc_embed_signup" class="subscribe-form">
-                                            <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                                <div id="mc_embed_signup_scroll" class="mc-form">
-                                                    <input type="email" value="" name="EMAIL" class="email" placeholder="Your mail address" required>
-                                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                                    <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
-                                                    <div class="clear"><input type="submit" value="SEND" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="payment-img">
-                                    <a href="index.blade.php">
-                                        <img src="../../../public/img/icon-img/payment.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom gray-bg-3 pt-17 pb-15">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="copyright text-center">
-                                <p>Copyright © <a href="#">Marten.</a> All Right Reserved.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-		</footer>
+    @include('layouts.footer')
 		<!-- all js here -->
         @include('layouts.scripts')
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmGmeot5jcjdaJTvfCmQPfzeoG_pABeWo"></script>
@@ -201,7 +77,7 @@
                 var mapOptions = {
                     zoom: 11,
                     scrollwheel: false,
-                    center: new google.maps.LatLng(40.709896, -73.995481),
+                    center: new google.maps.LatLng(49.432956, 27.004881),
                     styles:
                     [
                         {
@@ -287,7 +163,7 @@
                 var mapElement = document.getElementById('map');
                 var map = new google.maps.Map(mapElement, mapOptions);
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(40.709896, -73.995481),
+                    position: new google.maps.LatLng(49.432956, 27.004881),
                     map: map,
                     icon: '../../../public/img/icon-img/map.png',
                     animation:google.maps.Animation.BOUNCE,

@@ -7,14 +7,14 @@
                         <div class="footer-info-wrapper">
                             <div class="footer-logo">
                                 <a href="#">
-                                    <img src="../../../public/img/logo/logo-2.png" alt="">
+                                    <img src="../../../public/img/myimg/logo.png" alt="">
                                 </a>
                             </div>
                             <p>Lorem ipsum dolor sit amet, co adipisi elit, sed eiusmod tempor incididunt ut labore et dolore</p>
                             <div class="social-icon">
                                 <ul>
-                                    <li><a href="#"><i class="icon-social-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icon-social-instagram"></i></a></li>
+                                    <li><a href="https://twitter.com/ihor_Bali"><i class="icon-social-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/_igbalitskiy_/"><i class="icon-social-instagram"></i></a></li>
                                     <li><a href="#"><i class="icon-social-linkedin"></i></a></li>
                                     <li><a href="#"><i class="icon-social-skype"></i></a></li>
                                     <li><a href="#"><i class="icon-social-dribbble"></i></a></li>

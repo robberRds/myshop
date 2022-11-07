@@ -135,42 +135,33 @@
                     <div class="mobile-menu">
                         <nav id="mobile-menu-active">
                             <ul class="menu-overflow">
-                                <li><a href="#">HOME</a></li>
-                                <li><a href="#">pages</a>
+                                <li><a href="{{route('food-shop/index')}}">HOME</a></li>
+                                <li><a href="#">PAGES</a>
                                     <ul>
                                         <li>
-                                            <a href="#">about us</a>
+                                            <a href="{{route('food-shop/index')}}">Home</a>
                                         </li>
                                         <li>
-                                            <a href="#">shop page</a>
+                                            <a href="{{route('food-shop/shop-page')}}">Food</a>
                                         </li>
                                         <li>
-                                            <a href="#">shop list</a>
+                                            <a href="{{route('food-shop/about')}}">About</a>
                                         </li>
                                         <li>
-                                            <a href="#">product details</a>
+                                            <a href="{{route('food-shop/contact')}}">Contact us</a>
                                         </li>
                                         <li>
-                                            <a href="#">cart page</a>
+                                            <a href="{{route('food-shop/my-account')}}">My account</a>
                                         </li>
                                         <li>
-                                            <a href="#">checkout</a>
+                                            <a href="{{route('food-shop/checkout')}}">Checkout</a>
                                         </li>
                                         <li>
-                                            <a href="#">wishlist</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">contact us</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">my account</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">login / register</a>
+                                            <a href="#">Admin</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Food</a>
+                                <li><a href="{{route('food-shop/shop-page')}}">Food</a>
                                     <ul>
                                         <li>
                                             <a href="#">Перша страва</a>

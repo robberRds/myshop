@@ -12,7 +12,7 @@
     </head>
     <body>
     @include('layouts.header')
-        <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/banner/banner-2.jpg);">
+        <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/myimg/board.png);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
                     <h2>Shop Page</h2>
@@ -120,7 +120,7 @@
                             </div>
                             <div class="shop-widget">
                                 <h4 class="shop-sidebar-title">Filter By Price</h4>
-                                 <div class="price_filter mt-25">
+                                <div class="price_filter mt-25">
                                     <div id="slider-range"></div>
                                     <div class="price_slider_amount">
                                         <div class="label-input">

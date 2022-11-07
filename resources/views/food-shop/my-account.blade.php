@@ -13,7 +13,7 @@
     </head>
     <body>
     @include('layouts.header')
-        <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/banner/banner-2.jpg);">
+        <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/myimg/board.png);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
                     <h2>My Account</h2>
@@ -27,6 +27,15 @@
         <!-- my account start -->
         <div class="my-account-area pt-100 pb-70">
             <div class="container">
+                <form class="text-center" method="POST" action="{{ route('logout') }}">
+                    <div class="billing-btn">
+                        @csrf
+                        <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
+                            {{ __('Log Out') }}
+                        </button>
+                    </div>
+                </form>
+                <br/>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="checkout-wrapper">
@@ -35,6 +44,7 @@
                                     <div class="panel-heading">
                                         <h5 class="panel-title"><span>1</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-1">Edit your account information </a></h5>
                                     </div>
+                                        @csrf
                                     <div id="my-account-1" class="panel-collapse collapse show">
                                         <div class="panel-body">
                                             <div class="billing-information-wrapper">
@@ -45,49 +55,26 @@
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="billing-info">
-                                                            <label>First Name</label>
-                                                            <input type="text">
+                                                            <label>Name</label>
+                                                            <input type="text" value="{{$user->name}}">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="billing-info">
-                                                            <label>Last Name</label>
-                                                            <input type="text">
+                                                            <label>Email</label>
+                                                            <input type="text" value="{{$user->email}}">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12 col-md-12">
                                                         <div class="billing-info">
-                                                            <label>Email Address</label>
-                                                            <input type="email">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="billing-info">
-                                                            <label>Telephone</label>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="billing-info">
-                                                            <label>Fax</label>
-                                                            <input type="text">
+                                                            <label>Password</label>
+                                                            <input type="password" value="{{$user->password}}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="billing-back-btn">
                                                     <div class="billing-back">
                                                         <a href="#"><i class="ti-arrow-up"></i> back</a>
-                                                    </div>
-                                                    <form method="POST" action="{{ route('logout') }}">
-                                                        <div class="billing-btn">
-                                                            @csrf
-                                                            <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
-                                                                {{ __('Log Out') }}
-                                                            </button>
-                                                        </div>
-                                                    </form>
-                                                    <div class="billing-btn">
-                                                        <button type="submit">Continue</button>
                                                     </div>
                                                 </div>
                                             </div>

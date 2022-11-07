@@ -12,7 +12,7 @@
     </head>
     <body>
     @include('layouts.header')
-        <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/banner/banner-2.jpg);">
+        <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/myimg/board.png);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
                     <h2>Product Details</h2>
@@ -41,12 +41,12 @@
                             <div class="quality-wrapper mt-30 product-quantity">
                                 <label>Qty:</label>
                                 <div class="cart-plus-minus">
-                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="2">
+                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="{{$q=1}}">
                                 </div>
                             </div>
                             <div class="product-list-action">
                                 <div class="product-list-action-left">
-                                    <a class="addtocart-btn" href="#" title="Add to cart">
+                                    <a class="addtocart-btn" href="{{route('food-shop/add-cart', ['id'=>$item->id])}}" title="Add to cart">
                                         <i class="ion-bag"></i>
                                         Add to cart
                                     </a>
