@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-5">
                     <div class="logo pt-39">
-                        <a href="{{route('food-shop/index')}}"><img alt="" src="../../../public/img/logo/logo.png"></a>
+                        <a href="{{route('food-shop/index')}}"><img alt="" src="../../../public/img/myimg/logo.png"></a>
                     </div>
                 </div>
                 <div class="col-xl-8 col-lg-7 d-none d-lg-block">
@@ -64,34 +64,25 @@
                                 <li><a href="#">PAGES</a>
                                     <ul class="submenu">
                                         <li>
-                                            <a href="#">about us</a>
+                                            <a href="{{route('food-shop/index')}}">Home</a>
                                         </li>
                                         <li>
-                                            <a href="#">shop page</a>
+                                            <a href="{{route('food-shop/shop-page')}}">Food</a>
                                         </li>
                                         <li>
-                                            <a href="#">shop list</a>
+                                            <a href="{{route('food-shop/about')}}">About</a>
                                         </li>
                                         <li>
-                                            <a href="#">product details</a>
+                                            <a href="{{route('food-shop/contact')}}">Contact us</a>
                                         </li>
                                         <li>
-                                            <a href="#">cart page</a>
+                                            <a href="{{route('food-shop/my-account')}}">My account</a>
                                         </li>
                                         <li>
-                                            <a href="#">checkout</a>
+                                            <a href="{{route('food-shop/checkout')}}">Checkout</a>
                                         </li>
                                         <li>
-                                            <a href="#">wishlist</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">contact us</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">my account</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">login / register</a>
+                                            <a href="#">Admin</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -103,20 +94,6 @@
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-7">
                     <div class="search-login-cart-wrapper">
-                        <div class="header-search same-style">
-                            <button class="search-toggle">
-                                <i class="icon-magnifier s-open"></i>
-                                <i class="ti-close s-close"></i>
-                            </button>
-                            <div class="search-content">
-                                <form action="#">
-                                    <input type="text" placeholder="Search">
-                                    <button>
-                                        <i class="icon-magnifier"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
                         <div class="header-login same-style">
                             <a href="{{route('food-shop/my-account')}}"><i class="icon-user icons"></i></a>
                         </div>

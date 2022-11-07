@@ -3,11 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Marten - Pet Food eCommerce Bootstrap4 Template</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="../../../public/img/favicon.png">
 
 		<!-- all css here -->
         @include('layouts.styles')
@@ -19,7 +17,7 @@
                 <div class="breadcrumb-content text-center">
                     <h2>About Us</h2>
                     <ul>
-                        <li><a href="index.blade.php">home</a></li>
+                        <li><a href="{{route('food-shop/index')}}">home</a></li>
                         <li class="active">About Us</li>
                     </ul>
                 </div>
@@ -45,7 +43,7 @@
                                 </ul>
                             </div>
                             <div class="about-us-btn">
-                                <a class="btn-style" href="#">CONTACT US</a>
+                                <a class="btn-style" href="{{route('food-shop/contact')}}">CONTACT US</a>
                             </div>
                         </div>
                     </div>

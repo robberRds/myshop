@@ -3,11 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Marten - Pet Food eCommerce Bootstrap4 Template</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="../../../public/img/favicon.png">
 
 		<!-- all css here -->
         @include('layouts.styles')
@@ -19,7 +17,7 @@
                 <div class="breadcrumb-content text-center">
                     <h2>Shop Page</h2>
                     <ul>
-                        <li><a href="index.blade.php">home</a></li>
+                        <li><a href="{{route("food-shop/index")}}">home</a></li>
                         <li class="active">Shop Page</li>
                     </ul>
                 </div>
@@ -32,12 +30,7 @@
                         <div class="shop-topbar-wrapper">
                             <div class="product-sorting-wrapper">
                                 <div class="product-show shorting-style">
-                                    <label>Showing <span>1-20</span> of <span>100</span> Results</label>
-                                    <select>
-                                        <option value="">12</option>
-                                        <option value="">24</option>
-                                        <option value="">36</option>
-                                    </select>
+                                    <label>Showing All Results</label>
                                 </div>
                             </div>
                             <div class="grid-list-options">
@@ -54,14 +47,11 @@
                                     <div class="product-width col-lg-6 col-xl-4 col-md-6 col-sm-6">
                                         <div class="product-wrapper mb-10">
                                             <div class="product-img">
-                                                <a href="product-details.blade.php">
+                                                <a href="{{route('food-shop/product-details', ['id'=>$product->id])}}">
                                                     <img src="../../../public/storage/{{$product->image}}" alt="">
                                                 </a>
                                                 <div class="product-action">
-                                                    <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                                        <i class="ti-plus"></i>
-                                                    </a>
-                                                    <a title="Add To Cart" href="#">
+                                                    <a title="Add To Cart" href="{{route('food-shop/add-cart', ['id'=>$product->id])}}">
                                                         <i class="ti-shopping-cart"></i>
                                                     </a>
                                                 </div>
@@ -72,24 +62,23 @@
                                                 </div>
                                             </div>
                                             <div class="product-content">
-                                                <h4><a href="product-details.blade.php">{{$product->name}}</a></h4>
+                                                <h4><a href="{{route('food-shop/product-details', ['id'=>$product->id])}}">{{$product->name}}</a></h4>
                                                 <div class="product-price">
                                                     <span> {{$product->price}} </span>
                                                 </div>
                                             </div>
                                             <div class="product-list-content">
-                                                <h4><a href="#">Dog Calcium Food</a></h4>
+                                                <h4><a href="#">{{$product->name}}</a></h4>
                                                 <div class="product-price">
-                                                    <span class="new">$19.00 </span>
+                                                    <span class="new">{{$product->price}} </span>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consect adipis elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad quis nostrud exerci ullamco laboris nisi ut aliquip ex ea commodo consequat, Duis aute irure dolor.</p>
+                                                <p>{{$product->description}}</p>
                                                 <div class="product-list-action">
                                                     <div class="product-list-action-left">
-                                                        <a class="addtocart-btn" title="Add to cart" href="#"><i class="ion-bag"></i> Add to cart</a>
+                                                        <a class="addtocart-btn" title="Add to cart" href="{{route('food-shop/add-cart', ['id'=>$product->id])}}"><i class="ion-bag"></i> Add to cart</a>
                                                     </div>
                                                     <div class="product-list-action-right">
                                                         <a title="Wishlist" href="#"><i class="ti-heart"></i></a>
-                                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"><i class="ti-plus"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -146,45 +135,10 @@
                                 <h4 class="shop-sidebar-title">Food Category </h4>
                                  <div class="shop-list-style mt-20">
                                     <ul>
-                                        <li><a href="#">Canned Food</a></li>
-                                        <li><a href="#">Dry Food</a></li>
-                                        <li><a href="#">Food Pouches</a></li>
-                                        <li><a href="#">Food Toppers</a></li>
-                                        <li><a href="#">Fresh Food</a></li>
-                                        <li><a href="#">Frozen Food</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="shop-widget mt-50">
-                                <h4 class="shop-sidebar-title">Top Brands </h4>
-                                 <div class="shop-list-style mt-20">
-                                    <ul>
-                                        <li><a href="#">Authority</a></li>
-                                        <li><a href="#">AvoDerm Natural</a></li>
-                                        <li><a href="#">Bil-Jac</a></li>
-                                        <li><a href="#">Blue Buffalo</a></li>
-                                        <li><a href="#">Castor & Pollux</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="shop-widget mt-50">
-                                <h4 class="shop-sidebar-title">Health Consideration </h4>
-                                 <div class="shop-list-style mt-20">
-                                    <ul>
-                                        <li><a href="#">Bone Development <span>18</span></a></li>
-                                        <li><a href="#">Digestive Care <span>22</span></a></li>
-                                        <li><a href="#">General Health <span>19</span></a></li>
-                                        <li><a href="#">Hip & Joint  <span>41</span></a></li>
-                                        <li><a href="#">Immune System  <span>22</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="shop-widget mt-50">
-                                <h4 class="shop-sidebar-title">Nutritional Option </h4>
-                                 <div class="shop-list-style mt-20">
-                                    <ul>
-                                        <li><a href="#">Grain Free  <span>18</span></a></li>
-                                        <li><a href="#">Natural <span>22</span></a></li>
+                                        <li><a href="#">First Food</a></li>
+                                        <li><a href="#">Second Food</a></li>
+                                        <li><a href="#">Deserts</a></li>
+                                        <li><a href="#">Drinks</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -194,94 +148,6 @@
             </div>
         </div>
 		@include('layouts.footer')
-		<!-- modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span class="ti-close" aria-hidden="true"></span>
-            </button>
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="qwick-view-left">
-                            <div class="quick-view-learg-img">
-                                <div class="quick-view-tab-content tab-content">
-                                    <div class="tab-pane active show fade" id="modal1" role="tabpanel">
-                                        <img src="../../../public/img/quick-view/l1.jpg" alt="">
-                                    </div>
-                                    <div class="tab-pane fade" id="modal2" role="tabpanel">
-                                        <img src="../../../public/img/quick-view/l2.jpg" alt="">
-                                    </div>
-                                    <div class="tab-pane fade" id="modal3" role="tabpanel">
-                                        <img src="../../../public/img/quick-view/l3.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="quick-view-list nav" role="tablist">
-                                <a class="active" href="#modal1" data-toggle="tab" role="tab">
-                                    <img src="../../../public/img/quick-view/s1.jpg" alt="">
-                                </a>
-                                <a href="#modal2" data-toggle="tab" role="tab">
-                                    <img src="../../../public/img/quick-view/s2.jpg" alt="">
-                                </a>
-                                <a href="#modal3" data-toggle="tab" role="tab">
-                                    <img src="../../../public/img/quick-view/s3.jpg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="qwick-view-right">
-                            <div class="qwick-view-content">
-                                <h3>Dog Calcium Food</h3>
-                                <div class="product-price">
-                                    <span>$19.00 </span>
-                                </div>
-                                <div class="product-rating">
-                                    <i class="ion-star theme-color"></i>
-                                    <i class="ion-star theme-color"></i>
-                                    <i class="ion-star theme-color"></i>
-                                    <i class="ion-star theme-color"></i>
-                                    <i class="ion-star theme-color"></i>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do amt tempor incididun ut labore et dolore magna aliqua. Ut enim ad mi , quis nostrud veniam exercitation .</p>
-                                <div class="quick-view-select">
-                                    <div class="select-option-part">
-                                        <label>Size*</label>
-                                        <select class="select">
-                                            <option value="">- Please Select -</option>
-                                            <option value="">XS</option>
-                                            <option value="">S</option>
-                                            <option value="">M</option>
-                                            <option value=""> L</option>
-                                            <option value="">XL</option>
-                                            <option value="">XXL</option>
-                                        </select>
-                                    </div>
-                                    <div class="select-option-part">
-                                        <label>Color*</label>
-                                        <select class="select">
-                                            <option value="">- Please Select -</option>
-                                            <option value="">orange</option>
-                                            <option value="">pink</option>
-                                            <option value="">yellow</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="quickview-plus-minus">
-                                    <div class="cart-plus-minus">
-                                        <input type="text" value="2" name="qtybutton" class="cart-plus-minus-box">
-                                    </div>
-                                    <div class="quickview-btn-cart">
-                                        <a class="btn-style" href="#">add to cart</a>
-                                    </div>
-                                    <div class="quickview-btn-wishlist">
-                                        <a class="btn-hover" href="#"><i class="ti-heart"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 		<!-- all js here -->
         @include('layouts.scripts')
     </body>

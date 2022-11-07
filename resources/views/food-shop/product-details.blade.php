@@ -3,11 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Marten - Pet Food eCommerce Bootstrap4 Template</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="../../../public/img/favicon.png">
 
 		<!-- all css here -->
         @include('layouts.styles')
@@ -19,7 +17,7 @@
                 <div class="breadcrumb-content text-center">
                     <h2>Product Details</h2>
                     <ul>
-                        <li><a href="index.blade.php">home</a></li>
+                        <li><a href="{{route('food-shop/index')}}">home</a></li>
                         <li class="active">Product Details</li>
                     </ul>
                 </div>
@@ -78,7 +76,6 @@
                 <div class="description-review-wrapper gray-bg pt-40">
                     <div class="description-review-topbar nav text-center">
                         <a class="active" data-toggle="tab" href="#des-details1">DESCRIPTION</a>
-                        <a data-toggle="tab" href="#des-details2">MORE INFORMATION</a>
                         <a data-toggle="tab" href="#des-details3">REVIEWS (2)</a>
                     </div>
                     <div class="tab-content description-review-bottom">
@@ -86,17 +83,6 @@
                             <div class="product-description-wrapper">
                                 <p>{{$item->description}}</p>
 
-                            </div>
-                        </div>
-                        <div id="des-details2" class="tab-pane">
-                            <div class="product-anotherinfo-wrapper">
-                                <ul>
-                                    <li><span>name:</span> Scanpan Classic Covered</li>
-                                    <li><span>color:</span> orange , pink , yellow </li>
-                                    <li><span>size:</span> xl, l , m , sl</li>
-                                    <li><span>length:</span> 102cm, 110cm , 115cm </li>
-                                    <li><span>Brand:</span> Nike, Religion, Diesel, Monki </li>
-                                </ul>
                             </div>
                         </div>
                         <div id="des-details3" class="tab-pane">

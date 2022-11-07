@@ -1,3 +1,6 @@
+<title>IrBali - Food eCommerce</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../../public/img/myimg/smallogo.png">
+
 <link rel="stylesheet" href="../../../public/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../../public/css/animate.css">
 <link rel="stylesheet" href="../../../public/css/simple-line-icons.css">

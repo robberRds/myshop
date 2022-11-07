@@ -3,12 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Marten - Pet Food eCommerce Bootstrap4 Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="../../../public/img/favicon.png">
-
     <!-- all css here -->
     @include('layouts.styles')
 </head>
@@ -21,16 +17,16 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12 col-sm-7">
                                 <div class="slider-content slider-animated-1 pt-114">
-                                    <h3 class="animated">We keep pets for pleasure.</h3>
-                                    <h1 class="animated">Food & Vitamins <br>For all Pets</h1>
+                                    <h3 class="animated">Welcome to our institution ♥</h3>
+                                    <h1 class="animated">Food & drinks <br>To ALL!!!</h1>
                                     <div class="slider-btn">
-                                        <a class="animated" href="product-details.blade.php">SHOP NOW</a>
+                                        <a class="animated" href="{{route('food-shop/shop-page')}}">SHOP NOW</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12 col-sm-5">
                                 <div class="slider-single-img slider-animated-1">
-                                    <img class="animated" src="../../../public/img/slider/slider-single-img.png" alt="">
+                                    <img class="animated" src="../../../public/img/myimg/restouran.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -41,16 +37,16 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-7 col-12">
                                 <div class="slider-content slider-animated-1 pt-114">
-                                    <h3 class="animated">We keep pets for pleasure.</h3>
-                                    <h1 class="animated">Food & Vitamins <br>For all Pets</h1>
+                                    <h3 class="animated">We are glad that you visited us.</h3>
+                                    <h1 class="animated">Welcome!!!</h1>
                                     <div class="slider-btn">
-                                        <a class="animated" href="product-details.blade.php">SHOP NOW</a>
+                                        <a class="animated" href="{{route('food-shop/shop-page')}}">SHOP NOW</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-5 col-12">
                                 <div class="slider-single-img slider-animated-1">
-                                    <img class="animated" src="../../../public/img/slider/slider-single-img-2.png" alt="">
+                                    <img class="animated" src="../../../public/img/myimg/food.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -64,30 +60,30 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="single-food-category cate-padding-1 text-center mb-30">
                             <div class="single-food-hover-2">
-                                <img src="../../../public/img/product/product-1.jpg" alt="">
+                                <img src="../../../public/img/myimg/borch.png" alt="">
                             </div>
                             <div class="single-food-content">
-                                <h3>Dogs Food</h3>
+                                <h3>Food</h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4">
                         <div class="single-food-category cate-padding-2 text-center mb-30">
                             <div class="single-food-hover-2">
-                                <img src="../../../public/img/product/product-2.jpg" alt="">
+                                <img src="../../../public/img/myimg/kava.png" alt="">
                             </div>
                             <div class="single-food-content">
-                                <h3>Cats Food</h3>
+                                <h3>Deserts</h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4">
                         <div class="single-food-category cate-padding-3 text-center mb-30">
                             <div class="single-food-hover-2">
-                                <img src="../../../public/img/product/product-3.jpg" alt="">
+                                <img src="../../../public/img/myimg/tort.png" alt="">
                             </div>
                             <div class="single-food-content">
-                                <h3>Fishs Food</h3>
+                                <h3>Drinks</h3>
                             </div>
                         </div>
                     </div>
@@ -109,9 +105,6 @@
                                     <img src="../../../public/storage/{{$randProduct->image}}" alt="">
                                 </a>
                                 <div class="product-action">
-                                    <a title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i>
-                                    </a>
                                     <a title="Add To Cart" href="{{route('food-shop/add-cart', ['id'=>$randProduct->id])}}">
                                         <i class="ti-shopping-cart"></i>
                                     </a>
@@ -159,7 +152,7 @@
                                 <div data-countdown="2017/10/01"></div>
                             </div>
                             <div class="discount-btn mt-35">
-                                <a class="btn-style" href="#">SHOP NOW</a>
+                                <a class="btn-style" href="{{route('food-shop/shop-page')}}">SHOP NOW</a>
                             </div>
                         </div>
                     </div>
@@ -167,55 +160,6 @@
                 </div>
             </div>
         </div>
-		<div class="testimonial-area pt-90 pb-70 bg-img" style="background-image:url(../../../public/img/banner/banner-1.jpg);">
-		    <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 ml-auto mr-auto">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-text-slider text-center">
-                                <div class="sin-testiText">
-                                    <p>Lorem ipsum dolor sit amet, co adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                </div>
-                                <div class="sin-testiText">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or amro porano ja cai tomi tai go amro porano  amro porano ja cai tomi tai go  .... </p>
-                                </div>
-                                <div class="sin-testiText">
-                                    <p>Lorem ipsum dolor sit amet, co adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                </div>
-                                <div class="sin-testiText">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or amro porano ja cai tomi tai go amro porano  amro porano ja cai tomi tai go  .... </p>
-                                </div>
-                            </div>
-                            <div class="testimonial-image-slider text-center">
-                                <div class="sin-testiImage">
-                                    <img src="../../../public/img/testi/3.jpg" alt="">
-                                    <h3>Robiul Islam</h3>
-                                    <h5>Customer</h5>
-                                </div>
-                                <div class="sin-testiImage">
-                                    <img src="../../../public/img/testi/4.jpg" alt="">
-                                    <h3>Robiul Islam</h3>
-                                    <h5>Customer</h5>
-                                </div>
-                                <div class="sin-testiImage">
-                                    <img src="../../../public/img/testi/3.jpg" alt="">
-                                    <h3>F. H. Shuvo</h3>
-                                    <h5>Developer</h5>
-                                </div>
-                                <div class="sin-testiImage">
-                                    <img src="../../../public/img/testi/5.jpg" alt="">
-                                    <h3>T. T. Rayed</h3>
-                                    <h5>CEO</h5>
-                                </div>
-                            </div>
-                            <div class="testimonial-shap">
-                                <img src="../../../public/img/icon-img/testi-shap.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-		</div>
 		<div class="service-area bg-img pt-100 pb-65">
 		    <div class="container">
 		        <div class="row">
@@ -241,64 +185,6 @@
 		                </div>
 		            </div>
 		        </div>
-		    </div>
-		</div>
-		<div class="blog-area pb-70">
-		    <div class="container">
-		        <div class="section-title text-center mb-60">
-                    <h4>Latest News</h4>
-                    <h2>From Our Blog</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-wrapper mb-30 gray-bg">
-                            <div class="blog-img hover-effect">
-                                <a href="blog-details.blade.php"><img alt="" src="../../../public/img/blog/blog-1.jpg"></a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li>By: <span>Admin</span></li>
-                                        <li>Sep 14, 2018</li>
-                                    </ul>
-                                </div>
-                                <h4><a href="blog-details.blade.php">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-wrapper mb-30 gray-bg">
-                            <div class="blog-img hover-effect">
-                                <a href="blog-details.blade.php"><img alt="" src="../../../public/img/blog/blog-2.jpg"></a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li>By: <span>Admin</span></li>
-                                        <li>Sep 14, 2018</li>
-                                    </ul>
-                                </div>
-                                <h4><a href="blog-details.blade.php">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-wrapper mb-30 gray-bg">
-                            <div class="blog-img hover-effect">
-                                <a href="blog-details.blade.php"><img alt="" src="../../../public/img/blog/blog-3.jpg"></a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li>By: <span>Admin</span></li>
-                                        <li>Sep 14, 2018</li>
-                                    </ul>
-                                </div>
-                                <h4><a href="blog-details.blade.php">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 		    </div>
 		</div>
         @include('layouts.footer')
