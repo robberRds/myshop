@@ -148,7 +148,6 @@
                                     <h4>Total : <span class="shop-total">${{$sum}}</span></h4>
                                 </div>
                                 <div class="shopping-cart-btn">
-                                    <a href="{{route('food-shop/cart')}}">view cart</a>
                                     <a href="{{route('food-shop/checkout')}}">checkout</a>
                                 </div>
                             </div>

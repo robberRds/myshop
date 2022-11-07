@@ -46,9 +46,6 @@ Route::get('food-shop/my-account', [\App\Http\Controllers\ProductController::cla
 Route::post('food-shop/make-order', [\App\Http\Controllers\ProductController::class, 'makeOrder'])
     ->name('food-shop/make-order')->middleware('auth');
 
-Route::get('food-shop/cart', [\App\Http\Controllers\ProductController::class, 'mycart'])
-    ->name('food-shop/cart')->middleware('auth');
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

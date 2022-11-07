@@ -174,7 +174,7 @@ class ProductController extends Controller
         $order->address = $request->address . ' ' . $request->sity . ' ' . $request->post;
 
         if($order->save()){
-            Mail::to('ihorbalitsky@gmail.com')->send(new OrderIn([
+            Mail::to('ihor.bali@mail.ru')->send(new OrderIn([
                 'cart' => $cart,
                 'sum' => $sum,
                 'user' => $user
@@ -194,17 +194,5 @@ class ProductController extends Controller
 
 
         return back();
-    }
-
-    public function mycart()
-    {
-        $sessionId = Session::getId();
-        \Cart::session($sessionId);
-        $cart = \Cart::getContent();
-        $sum = \Cart::getTotal('price');
-        return view('food-shop/cart', [
-            'cart' => $cart,
-            'sum' => $sum
-        ]);
     }
 }
